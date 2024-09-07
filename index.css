@@ -1,10 +1,11 @@
 body {
   background: #eeeff3;
   padding: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
 }
 
 .raleway {
-  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   /* font-weight: <weight>;
   font-style: normal; */
@@ -68,17 +69,24 @@ nav {
 main {
   display: flex;
   gap: 10px;
-  background-color: antiquewhite;
-  gap: 10px;
-  height: 75vh;
+  gap: 20px;
+  height: 80vh;
 }
 .mainLeftText {
   /* background-color: aquamarine; */
 }
 .all-product {
- display: flex;
- flex-direction: row;
- justify-items: first baseline;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-right: 1px solid #262626;
+  gap: 10px;
+}
+.cart-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .mainLeft {
   display: flex;
@@ -87,36 +95,54 @@ main {
   background-color: #262626;
   flex: 1;
   border-radius: 20px;
-  height: 100%;
-  color:red;
+  color: rgb(251, 251, 251);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
-.cart-section{
+.cart-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  width: 20%;
-  position: relative;
+  width: fit-content;
   border-radius: 10px;
-  margin: 0px 0px 10px 20px;
-  width: 35%;
+  color: #262626;
+  height: 13%;
 }
-.fa-cart-shopping{
-  border: #262626 1px solid;
-  padding: 17px 25px 17px 25px;
-
-}
-.shop{
+.shop {
+  color: #26262676;
   font-size: 10px;
-  position: absolute;
-  bottom: 30%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.all-product > p {
+  display: flex;
+  margin: 0;
+  align-items: center;
 }
 .mainRight {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  height: 100%;
   color: white;
+}
+.fa-arrow-right-long {
+  font-size: 2rem;
+  rotate: 320deg;
+  font-style: normal;
+  position: relative;
+  right: 2px;
+}
+.fa-paper-plane {
+  font-size: 2rem;
+  /* rotate: deg; */
+  font-style: normal;
+  position: relative;
+  right: 2px;
 }
 .rightTop {
   display: flex;
@@ -126,10 +152,41 @@ main {
   border-radius: 20px;
   flex: 1;
   color: black;
+  padding: 10px 10px 17px 17px;
+  position: relative;
+  overflow: hidden;
+}
+.moon1 {
+  position: absolute;
+  height: 18rem;
+  bottom: -90%;
+  right: 0%;
+  z-index: 2;
+}
+.moon2 {
+  position: absolute;
+  height: 10rem;
+  bottom: -10%;
+  right: 12%;
+  z-index: 1;
+}
+.moon3 {
+  position: absolute;
+  height: 2rem;
+  top: 10%;
+  right: 24%;
+}
+
+.mainImage {
+  position: absolute;
+  height: 15rem;
+  bottom: 10px;
+  right: -13%;
+  rotate: 30deg;
 }
 .rightbuttom {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   border-radius: 20px;
   flex: 1;
 }
@@ -140,6 +197,7 @@ main {
   background-color: #b386fd;
   flex: 1;
   border-radius: 20px;
+  padding: 10px 10px 17px 17px;
 }
 .rightbuttom-right {
   display: flex;
@@ -149,9 +207,41 @@ main {
   flex: 1;
   border-radius: 20px;
   color: black;
+  padding: 10px 10px 17px 17px;
 }
 .upperText {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: small;
+}
+.raleway {
+  color: rgba(0, 0, 0, 0.644);
+  text-transform: capitalize;
+  font-size: smaller;
+  font-weight: bold;
+}
+.raleway-1 {
+  text-transform: capitalize;
+  font-size: smaller;
+  font-weight: bold;
+}
+.big-text {
+  color: black;
+  font-size: 35px;
+  font-weight: 450;
+  height: 10px;
+}
+.big-text-1 {
+  font-size: 35px;
+  font-weight: 450;
+  height: 10px;
+}
+
+/* mobile screen size */
+@media (min-width: 320px) and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 }
